@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokémon World Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 flex flex-col min-h-screen">
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Audio de fondo -->
 
     <!-- Header -->
     <header class="bg-yellow-400 text-blue-900 py-6 text-center">
-        <h1 class="text-4xl font-extrabold">Pokémon World</h1>
+      <h1 class="text-4xl font-extrabold">Pokémon World</h1>
     </header>
 
     <!-- Main Container -->
     <div class="container mx-auto grid grid-cols-12 gap-4 flex-1 p-4">
+      <!-- Left Sidebar (Navigation) -->
+      <nav class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="text-blue-900 hover:underline block">Pokedex</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-900 hover:underline block">Types</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-900 hover:underline block">Regions</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-900 hover:underline block">Battles</a>
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Left Sidebar (Navigation) -->
-        <nav class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
-            <ul class="space-y-2">
-                <li><a href="#" class="text-blue-900 hover:underline block">Pokedex</a></li>
-                <li><a href="#" class="text-blue-900 hover:underline block">Types</a></li>
-                <li><a href="#" class="text-blue-900 hover:underline block">Regions</a></li>
-                <li><a href="#" class="text-blue-900 hover:underline block">Battles</a></li>
-            </ul>
-        </nav>
+      <!-- Main Content -->
+      <main class="col-span-8 bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-gray-700 text-3xl font-semibold mb-4">
+          Welcome to the Pokémon World
+        </h2>
+        <p class="text-gray-600">
+          Here you can find information about all Pokémon, their abilities,
+          types, and more!
+        </p>
+      </main>
 
-        <!-- Main Content -->
-        <main class="col-span-8 bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-gray-700 text-3xl font-semibold mb-4">Welcome to the Pokémon World</h2>
-            <p class="text-gray-600">Here you can find information about all Pokémon, their abilities, types, and more!</p>
-        </main>
-
-        <!-- Right Sidebar (Featured Pokemon) -->
-        <aside class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
-            <h3 class="text-blue-900 text-lg font-semibold mb-2">Featured Pokémon</h3>
-            <ul>
-                <li class="text-gray-700">Pikachu - Electric Type</li>
-                <li class="text-gray-700">Charizard - Fire/Flying Type</li>
-                <li class="text-gray-700">Bulbasaur - Grass/Poison Type</li>
-            </ul>
-        </aside>
-
+      <!-- Right Sidebar (Featured Pokemon) -->
+      <aside class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
+        <h3 class="text-blue-900 text-lg font-semibold mb-2">
+          Featured Pokémon
+        </h3>
+        <ul>
+          <li class="text-gray-700">Pikachu - Electric Type</li>
+          <li class="text-gray-700">Charizard - Fire/Flying Type</li>
+          <li class="text-gray-700">Bulbasaur - Grass/Poison Type</li>
+          <button onclick="togglePlay()">Pausar/Reproducir</button>
+        </ul>
+      </aside>
     </div>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/ID_DE_LA_CANCION&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+</iframe>
 
     <!-- Footer -->
     <footer class="bg-blue-900 text-white text-center py-2">
-        &copy; 2024 Pokémon Fan Page
+      &copy; 2024 Pokémon Fan Page
     </footer>
-    
-</body>
+    <script src="../javaScript/Musica.js"></script>
+  </body>
 </html>

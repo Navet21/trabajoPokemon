@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.21.1",
-    "node": "^23.1.0",
-    "node-fetch": "^2.7.0"
-  }
-}
