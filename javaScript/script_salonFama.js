@@ -3,23 +3,27 @@ async function obtenerListaPokemon() {
         const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
         const data = await response.json();
 
-        // Obtener los detalles necesarios de cada Pokémon
-            const detallesPokemon = await Promise.all(
-                data.results.map(async (pokemon) => {
-                    const res = await fetch(pokemon.url);
-                    const detalles = await res.json();
-                    
-                    // Extraer solo el nombre, tipos e imagen
+        const detallesPokemon = await Promise.all(
+            data.results.map(async (pokemon) => {
+                const res = await fetch(pokemon.url);
+                const detalles = await res.json();
+
+                // Extraer solo el nombre, tipos e imágenes para los Pokémon seleccionados
+                if (["pikachu", "pidgeot", "bulbasaur", "squirtle", "charizard", "primeape"].includes(pokemon.name)) {
                     return {
                         name: detalles.name,
-                        types: detalles.types.map(t => t.type.name), // Obtiene los tipos
+                        types: detalles.types.map(t => t.type.name),
                         image: detalles.sprites.front_default,
-                        sonido: detalles.cries.legacy        // Obtiene la imagen frontal
+                        image2: detalles.sprites.back_default
                     };
-                })
+                }
+                return null; // Retorna null para los Pokémon que no cumplen la condición
+            })
         );
 
-        return detallesPokemon;
+        // Filtra los elementos null y retorna solo los Pokémon seleccionados
+        return detallesPokemon.filter(pokemon => pokemon !== null);
+
     } catch (error) {
         console.error(`Error al obtener los detalles de los Pokémon: ${error.message}`);
     }
@@ -31,7 +35,6 @@ obtenerListaPokemon().then(pokemones => {
             console.log(`Nombre: ${pokemon.name}`);
             console.log(`Tipos: ${pokemon.types.join(', ')}`);
             console.log(`Imagen: ${pokemon.image}`);
-            console.log(pokemon.sonido);
         });
     }
 });
