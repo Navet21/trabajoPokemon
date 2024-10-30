@@ -136,4 +136,3 @@ async function mostrarPokemon() {
 
 
 mostrarPokemon();
-
