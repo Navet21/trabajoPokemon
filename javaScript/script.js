@@ -51,7 +51,8 @@ async function mostrarPokemon() {
             imagenPokemon.classList.add('mx-auto', 'h-24', 'w-24');
 
             // Nombre del Pokémon
-            const nombrePokemon = document.createElement('h3');
+            const nombrePokemon = document.createElement('a');
+            nombrePokemon.href = "https://google.com"
             nombrePokemon.textContent = `#${index + 1} - ${pokemon.name.toUpperCase()}`;
             nombrePokemon.classList.add('text-xl', 'font-semibold', 'mt-4');
             // nombrePokemon.addEventListener()
