@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,22 +13,22 @@
     <h1 class="text-4xl font-extrabold">Pokémon World</h1>
   </header>
 
-  <div class="flex justify-center space-x-4 my-4">
-    <h2 class="text-3xl font-extrabold">Controles de musica:</h2>
+  <!-- Music Controls Section -->
+  <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 my-4">
+    <h2 class="text-2xl md:text-3xl font-extrabold">Controles de música:</h2>
     <!-- Botones de control de audio -->
-      <button onclick="detenerAudio()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
-        Detener
-      </button>
-      <button onclick="reiniciarAudio()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        Reiniciar
-      </button>
+    <button onclick="detenerAudio()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
+      Detener
+    </button>
+    <button onclick="reiniciarAudio()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      Reiniciar
+    </button>
   </div>
 
-
-  <!-- Audio de fondo oculto -->
+  <!-- Hidden Background Audio -->
   <audio id="miAudio" src="../multimedia/musicaFondo.m4a" loop class="hidden"></audio>
 
-  <!-- Modal de aviso de música -->
+  <!-- Music Notice Modal -->
   <div id="modalAviso" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
     <div class="bg-white rounded-lg p-8 max-w-sm mx-auto shadow-lg transform transition-all scale-100 opacity-100">
       <h2 class="text-2xl font-bold text-gray-800 mb-2">Aviso de Música de Fondo</h2>
@@ -37,44 +36,43 @@
         ¡Hola Entrenador! Esta página contiene música de fondo que podría sorprenderte.
         Haz clic en el botón de abajo para comenzar a explorar el mundo Pokémon con música.
       </p>
-      <button onclick="iniciarMusica()"
-        class="w-full py-2 px-4 bg-yellow-400 text-blue-900 rounded-lg font-semibold shadow-md hover:bg-yellow-500 hover:shadow-lg transform hover:scale-105 transition duration-150 ease-in-out">
+      <button onclick="iniciarMusica()" class="w-full py-2 px-4 bg-yellow-400 text-blue-900 rounded-lg font-semibold shadow-md hover:bg-yellow-500 hover:shadow-lg transform hover:scale-105 transition duration-150 ease-in-out">
         Gracias por el aviso
       </button>
     </div>
   </div>
 
   <!-- Main Container -->
-  <div class="container mx-auto grid grid-cols-12 gap-4 flex-1 p-4">
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 p-4">
     <!-- Left Sidebar (Navigation) -->
-    <nav class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
+    <nav class="bg-yellow-100 p-4 rounded-lg shadow-md lg:col-span-2">
       <ul class="space-y-2">
         <li><a href="salonFama.html" class="text-blue-900 hover:underline block">Salon de la Fama</a></li>
         <li><a href="historia.html" class="text-blue-900 hover:underline block">Historia Pokemon</a></li>
-        <li><a href="#" class="text-blue-900 hover:underline block">Regions</a></li>
+        <li><a href="#" class="text-blue-900 hover:underline block">Regiones</a></li>
         <li><a href="#" class="text-blue-900 hover:underline block">Pokedex</a></li>
       </ul>
     </nav>
 
     <!-- Main Content -->
-    <main class="col-span-8 bg-white p-6 rounded-lg shadow-md">
+    <main class="bg-white p-6 rounded-lg shadow-md lg:col-span-8">
       <h2 class="text-gray-700 text-3xl font-semibold mb-4">
-        Welcome to the Pokémon World
+        Bienvenido al Mundo Pokémon
       </h2>
       <p class="text-gray-600">
-        Here you can find information about all Pokémon, their abilities,
-        types, and more!
+        Aquí puedes encontrar información sobre todos los Pokémon, sus habilidades,
+        tipos y más.
       </p>
       <div id="pokemon-list" class="flex flex-wrap justify-center"></div>
     </main>
 
     <!-- Right Sidebar (Featured Pokemon) -->
-    <aside class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
-      <h3 class="text-blue-900 text-lg font-semibold mb-2">Featured Pokémon</h3>
+    <aside class="bg-yellow-100 p-4 rounded-lg shadow-md lg:col-span-2">
+      <h3 class="text-blue-900 text-lg font-semibold mb-2">Pokémon Destacados</h3>
       <ul>
-        <li class="text-gray-700">Pikachu - Electric Type</li>
-        <li class="text-gray-700">Charizard - Fire/Flying Type</li>
-        <li class="text-gray-700">Bulbasaur - Grass/Poison Type</li>
+        <li class="text-gray-700">Pikachu - Tipo Eléctrico</li>
+        <li class="text-gray-700">Charizard - Tipo Fuego/Volador</li>
+        <li class="text-gray-700">Bulbasaur - Tipo Planta/Veneno</li>
       </ul>
     </aside>
   </div>
@@ -84,9 +82,8 @@
     &copy; 2024 Pokémon Fan Page
   </footer>
 
-  <!-- Scripts externos para control de música y aviso -->
+  <!-- External Scripts for Music Control and Notice -->
   <script src="../javaScript/script.js"></script>
   <script src="../javaScript/scriptMusica.js"></script>
 </body>
-
 </html>
