@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon | Historia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-yellow-400 text-blue-900 py-6 text-center">
+        <h1 class="text-4xl font-extrabold">Pokémon World</h1>
+    </header>
+
+    <!-- Music Controls -->
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 my-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Controles de música:</h2>
+        <!-- Botones de control de audio -->
+        <button onclick="detenerAudio()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
+            Detener
+        </button>
+        <button onclick="reiniciarAudio()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            Reiniciar
+        </button>
+    </div>
+
+    <!-- Hidden Background Audio -->
+    <audio id="miAudio" src="../multimedia/musicaFondo.m4a" loop autoplay></audio>
+
+    <!-- Main Container -->
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 p-4">
+
+        <!-- Left Sidebar (Navigation) -->
+        <nav class="bg-yellow-100 p-4 rounded-lg shadow-md lg:col-span-2">
+            <ul class="space-y-2">
+                <li><a href="Pokemon.html" class="text-blue-900 hover:underline block">Pokedex</a></li>
+                <li><a href="salonFama.html" class="text-blue-900 hover:underline block">Salón de la Fama</a></li>
+                <li><a href="#" class="text-blue-900 hover:underline block">Regiones</a></li>
+                <li><a href="#" class="text-blue-900 hover:underline block">Batallas</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="bg-white p-6 rounded-lg shadow-md lg:col-span-8">
+            <img src="../images/logo_pokemon.png" alt="logo_pokemon" class="w-full h-auto mb-4">
+            <h2 class="text-gray-700 text-3xl font-semibold mb-4">Historia de Pokémon</h2>
+            <p class="text-gray-600">
+                Pokémon comenzó en 1996 como un juego de Game Boy, creado por Satoshi Tajiri y su equipo en Game Freak.
+                Inspirado por la infancia de Tajiri, Pokémon permitió a los jugadores capturar, entrenar y enfrentar
+                criaturas en batallas...
+            </p>
+
+            <!-- Secciones de Generaciones de Pokémon -->
+            <section class="my-8">
+                <h2 class="text-gray-700 text-3xl font-semibold my-4">Primera Generación</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_amarillo.png" alt="Pokémon Juego 1" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_azul.png" alt="Pokémon Juego 2" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_rojo.jpg" alt="Pokémon Juego 3" class="w-full h-auto rounded-md">
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-8">
+                <h2 class="text-gray-700 text-3xl font-semibold my-4">Segunda Generación</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_oro.png" alt="Pokémon Juego 1" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_plata.png" alt="Pokémon Juego 2" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_cristal.jpg" alt="Pokémon Juego 3" class="w-full h-auto rounded-md">
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-8">
+                <h2 class="text-gray-700 text-3xl font-semibold my-4">Juegos de Gamecube</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_coloseum.png" alt="Pokémon Juego 1" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_chanel.png" alt="Pokémon Juego 2" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_xd.png" alt="Pokémon Juego 3" class="w-full h-auto rounded-md">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Pokémon Destacados -->
+            <section class="my-8">
+                <h2 class="text-gray-700 text-3xl font-semibold my-4">Cuarta Generación</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_perla.png" alt="Pokémon Juego 1" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_diamante.png" alt="Pokémon Juego 2" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="../images/pokemon_platino.png" alt="Pokémon Juego 3" class="w-full h-auto rounded-md">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar (Featured Pokemon) -->
+        <aside class="bg-yellow-100 p-4 rounded-lg shadow-md lg:col-span-2">
+            <h3 class="text-blue-900 text-lg font-semibold mb-2">Pokémon Destacados</h3>
+            <ul>
+                <li class="text-gray-700">Pikachu - Tipo Eléctrico</li>
+                <li class="text-gray-700">Charizard - Tipo Fuego/Volador</li>
+                <li class="text-gray-700">Bulbasaur - Tipo Planta/Veneno</li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white text-center py-2">
+        &copy; 2024 Pokémon Fan Page
+    </footer>
+
+    <script src="../javaScript/scriptMusica.js"></script>
+</body>
+
+</html>
