@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon de la fama Kanto</title>
+    <title>Salón de la Fama Kanto</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 flex flex-col min-h-screen">
 
     <!-- Header -->
@@ -13,33 +15,50 @@
         <h1 class="text-4xl font-extrabold">Pokémon World</h1>
     </header>
 
+    <!-- Music Controls Section -->
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 my-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Controles de música:</h2>
+        <!-- Botones de control de audio -->
+        <button onclick="detenerAudio()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
+            Detener
+        </button>
+        <button onclick="reiniciarAudio()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            Reiniciar
+        </button>
+    </div>
+
+    <!-- Hidden Background Audio -->
+    <audio id="miAudio" src="../multimedia/musicaFondo.m4a" loop autoplay></audio>
+
     <!-- Main Container -->
-    <div class="container mx-auto grid grid-cols-12 gap-4 flex-1 p-4">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 p-4">
 
         <!-- Left Sidebar (Navigation) -->
-        <nav class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
+        <nav class="bg-yellow-100 p-4 rounded-lg shadow-md lg:col-span-2">
             <ul class="space-y-2">
                 <li><a href="Pokemon.html" class="text-blue-900 hover:underline block">Pokedex</a></li>
-                <li><a href="historia.html" class="text-blue-900 hover:underline block">Historia Pokemon</a></li>
-                <li><a href="#" class="text-blue-900 hover:underline block">Regions</a></li>
-                <li><a href="#" class="text-blue-900 hover:underline block">Battles</a></li>
+                <li><a href="historia.html" class="text-blue-900 hover:underline block">Historia Pokémon</a></li>
+                <li><a href="#" class="text-blue-900 hover:underline block">Regiones</a></li>
+                <li><a href="#" class="text-blue-900 hover:underline block">Batallas</a></li>
             </ul>
         </nav>
 
         <!-- Main Content -->
-        <main class="col-span-8 bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-gray-700 text-3xl font-semibold mb-4">Welcome to the Pokémon World</h2>
-            <p class="text-gray-600">Here you can find information about all Pokémon, their abilities, types, and more!</p>
+        <main class="bg-white p-6 rounded-lg shadow-md lg:col-span-8">
+            <h2 class="text-gray-700 text-3xl font-semibold mb-4">Bienvenido al Mundo Pokémon</h2>
+            <p class="text-gray-600">
+                Aquí puedes encontrar información sobre todos los Pokémon, sus habilidades, tipos y más.
+            </p>
             <div id="pokemon-list" class="flex flex-wrap justify-center"></div>
         </main>
 
         <!-- Right Sidebar (Featured Pokemon) -->
-        <aside class="col-span-2 bg-yellow-100 p-4 rounded-lg shadow-md">
-            <h3 class="text-blue-900 text-lg font-semibold mb-2">Featured Pokémon</h3>
+        <aside class="bg-yellow-100 p-4 rounded-lg shadow-md lg:col-span-2">
+            <h3 class="text-blue-900 text-lg font-semibold mb-2">Pokémon Destacados</h3>
             <ul>
-                <li class="text-gray-700">Pikachu - Electric Type</li>
-                <li class="text-gray-700">Charizard - Fire/Flying Type</li>
-                <li class="text-gray-700">Bulbasaur - Grass/Poison Type</li>
+                <li class="text-gray-700">Pikachu - Tipo Eléctrico</li>
+                <li class="text-gray-700">Charizard - Tipo Fuego/Volador</li>
+                <li class="text-gray-700">Bulbasaur - Tipo Planta/Veneno</li>
             </ul>
         </aside>
 
@@ -49,6 +68,9 @@
     <footer class="bg-blue-900 text-white text-center py-2">
         &copy; 2024 Pokémon Fan Page
     </footer>
+
     <script src="../javaScript/script_salonFama.js"></script>
+    <script src="../javaScript/scriptMusica.js"></script>
 </body>
+
 </html>
